@@ -9,13 +9,20 @@ import SwiftUI
 
 struct ContentView: View {
     var body: some View {
-        VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundStyle(.tint)
-            Text("Hello, world!")
+        NavigationView {
+            ScrollView {
+                VStack(spacing: 30) {
+                    MyCalendarView()
+                    SymptomView()
+                    GradientsBootcamp()
+                    ShapesBootcamp()
+                    ListBootcamp()
+                    ConfirmationDialogBootcamp()
+                    TextfieldBootcamp()
+                }
+            }
+            .navigationTitle("Bootcamp")
         }
-        .padding()
     }
 }
 
